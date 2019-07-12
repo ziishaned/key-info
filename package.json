@@ -1,0 +1,7 @@
+{
+	"name": "node-key-info",
+	"version": "0.0.1",
+	"description": "Get key code information",
+	"main": "index.js",
+	"license": "MIT"
+}

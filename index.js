@@ -1,20 +1,20 @@
 const keys = new Map();
 
-keys.set(1, { name: 'ESC', char: '' });
-keys.set(2, { name: '1', char: '1' });
-keys.set(3, { name: '2', char: '2' });
-keys.set(4, { name: '3', char: '3' });
-keys.set(5, { name: '4', char: '4' });
-keys.set(6, { name: '5', char: '5' });
-keys.set(7, { name: '6', char: '6' });
-keys.set(8, { name: '7', char: '7' });
-keys.set(9, { name: '8', char: '8' });
-keys.set(10, { name: '9', char: '9' });
-keys.set(11, { name: '0', char: '0' });
+keys.set(1, { name: 'esc', char: '' });
+keys.set(2, { name: '1', char: '' });
+keys.set(3, { name: '2', char: '' });
+keys.set(4, { name: '3', char: '' });
+keys.set(5, { name: '4', char: '' });
+keys.set(6, { name: '5', char: '' });
+keys.set(7, { name: '6', char: '' });
+keys.set(8, { name: '7', char: '' });
+keys.set(9, { name: '8', char: '' });
+keys.set(10, { name: '9', char: '' });
+keys.set(11, { name: '0', char: '' });
 keys.set(12, { name: 'MINUS', char: '-' });
 keys.set(13, { name: 'EQUAL', char: '=' });
-keys.set(14, { name: 'BACKSPACE', char: '' });
-keys.set(15, { name: 'TAB', char: '\t' });
+keys.set(14, { name: 'BACKSPACE', char: '⌫' });
+keys.set(15, { name: 'TAB', char: '⇥' });
 keys.set(16, { name: 'Q', char: 'Q' });
 keys.set(17, { name: 'W', char: 'W' });
 keys.set(18, { name: 'E', char: 'E' });
@@ -25,9 +25,9 @@ keys.set(22, { name: 'U', char: 'U' });
 keys.set(23, { name: 'I', char: 'I' });
 keys.set(24, { name: 'O', char: 'O' });
 keys.set(25, { name: 'P', char: 'P' });
-keys.set(26, { name: 'LEFT_BRACE', char: '(' });
-keys.set(27, { name: 'RIGHT_BRACE', char: ')' });
-keys.set(28, { name: 'ENTER', char: '\n' });
+keys.set(26, { name: 'LEFT_CURLY_BRACE', char: '[' });
+keys.set(27, { name: 'RIGHT_CURLY_BRACE', char: ']' });
+keys.set(28, { name: 'ENTER', char: '↩' });
 keys.set(29, { name: 'CONTROL', char: '⌃' });
 keys.set(30, { name: 'A', char: 'A' });
 keys.set(31, { name: 'S', char: 'S' });
@@ -39,7 +39,7 @@ keys.set(36, { name: 'J', char: 'J' });
 keys.set(37, { name: 'K', char: 'K' });
 keys.set(38, { name: 'L', char: 'L' });
 keys.set(39, { name: 'SEMICOLON', char: ';' });
-keys.set(40, { name: 'APOSTROPHE', char: "'" });
+keys.set(40, { name: 'APOSTROPHE', char: '\'' });
 keys.set(41, { name: 'GRAVE', char: '`' });
 keys.set(42, { name: 'SHIFT', char: '⇧' });
 keys.set(43, { name: 'BACKSLASH', char: '\\' });
@@ -56,7 +56,7 @@ keys.set(53, { name: 'SLASH', char: '/' });
 keys.set(54, { name: 'SHIFT', char: '⇧' });
 keys.set(55, { name: 'KP_ASTERISK', char: '' });
 keys.set(56, { name: 'ALT', char: '⌥' });
-keys.set(57, { name: 'SPACE', char: ' ' });
+keys.set(57, { name: 'SPACE', char: '' });
 keys.set(58, { name: 'CAPS_LOCK', char: '⇪' });
 keys.set(59, { name: 'F1', char: '' });
 keys.set(60, { name: 'F2', char: '' });
@@ -148,10 +148,10 @@ keys.set(194, { name: 'F24', char: '' });
 keys.set(3675, { name: 'COMMAND', char: '⌘' });
 keys.set(3676, { name: 'COMMAND', char: '⌘' });
 keys.set(3640, { name: 'OPTION', char: '⌥' });
-keys.set(57419, { name: 'ARROW LEFT', char: '' });
-keys.set(57416, { name: 'ARROW UP', char: '' });
-keys.set(57424, { name: 'ARROW DOWN', char: '' });
-keys.set(57421, { name: 'ARROW RIGHT', char: '' });
+keys.set(57419, { name: 'ARROW LEFT', char: '←' });
+keys.set(57416, { name: 'ARROW UP', char: '↑' });
+keys.set(57424, { name: 'ARROW DOWN', char: '↓' });
+keys.set(57421, { name: 'ARROW RIGHT', char: '→' });
 
 /**
  * Get key code information.
@@ -161,9 +161,9 @@ keys.set(57421, { name: 'ARROW RIGHT', char: '' });
  * @return {object}
  */
 const getKeyCodeInfo = keyCode => {
-	return keys.get(keyCode) || { name: 'UNKNOWN', char: '' };
+  return keys.get(keyCode) || { name: 'UNKNOWN', char: '' };
 };
 
 module.exports = {
-	getKeyCodeInfo,
+  getKeyCodeInfo,
 };
